@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Cotizador</string>
+    <string name="usuario">Usuario</string>
+    <string name="pass">Contraseña</string>
+    <string name="btn_log">Entrar</string>
+    <string name="btn_cotización">Nueva Cotización</string>
+    <string name="btn_comisiones">Comisiones</string>
+    <string name="btn_pago">Datos Para Pago</string>
+    <string name="titulo">Titulo</string>
+    <string name="cliente">Nombre del solicitante</string>
+    <string name="uso">Uso</string>
+    <string name="personal">Personal</string>
+    <string name="empresarial">Empresarial</string>
+    <string name="fecha_entrega">Fecha de entrega</string>
+    <string name="tamaño">Tamaño</string>
+    <string name="cant_per">Cantidad de personajes</string>
+    <string name="nivel_detalle">Nivel de detalle en el fondo</string>
+    <string name="descrip_detalle">Descripción del detalle</string>
+    <string name="referencia">Referencia</string>
+    <string name="impreso">Impreso</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="extra">Especificaciones extra</string>
+    <string name="cotizar">Cotizar</string>
+    <string name="ver_mas">Ver mas</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="btn_aceptar">Aceptar</string>
+    <string name="ver">Ver más</string>
+    <string name="precio">Cotización</string>
 </resources>

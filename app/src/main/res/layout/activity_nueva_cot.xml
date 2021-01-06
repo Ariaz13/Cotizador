@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFD495"
+    tools:context=".Nueva_cot">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:background="#A6A1A1"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="137dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="112dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:srcCompat="@mipmap/logo" />
+
+            <EditText
+                android:id="@+id/titulo"
+                android:layout_width="286dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="36dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="@string/titulo"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textColorHint="#602B2B2B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+            <EditText
+                android:id="@+id/nombre"
+                android:layout_width="286dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="36dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="@string/cliente"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textColorHint="#602B2B2B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="286dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="36dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombre">
+
+        <TextView
+            android:id="@+id/uso"
+            android:layout_width="104dp"
+            android:layout_height="41dp"
+            android:layout_weight="1"
+            android:paddingTop="8dp"
+            android:text="@string/uso"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:layout_width="215dp"
+            android:layout_height="41dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/personal"
+                android:layout_width="100dp"
+                android:layout_height="41dp"
+                android:buttonTint="#E3578C"
+                android:text="@string/personal"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/empresarial"
+                android:layout_width="115dp"
+                android:layout_height="41dp"
+                android:buttonTint="#E3578C"
+                android:text="@string/empresarial"
+                android:textColor="#000000" />
+        </RadioGroup>
+    </LinearLayout>
+
+            <EditText
+                android:id="@+id/fecha"
+                android:layout_width="286dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="36dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="@string/fecha_entrega"
+                android:inputType="date"
+                android:textColor="#000000"
+                android:textColorHint="#602B2B2B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/tamaño_s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="@string/tamaño"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fecha" />
+
+            <Spinner
+                android:id="@+id/tamaño"
+                android:layout_width="286dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="36dp"
+                android:backgroundTint="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tamaño_s" />
+
+            <EditText
+                android:id="@+id/cant_per"
+                android:layout_width="286dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="36dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:hint="@string/cant_per"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:textColorHint="#602B2B2B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tamaño" />
+
+    <TextView
+        android:id="@+id/nivel_detalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="@string/nivel_detalle"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cant_per" />
+
+            <Spinner
+                android:id="@+id/niv_det"
+                android:layout_width="286dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="36dp"
+                android:backgroundTint="#000000"
+                android:textColor="#000000"
+                android:textColorHint="#602B2B2B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nivel_detalle" />
+
+            <EditText
+                android:id="@+id/descrip_detalle"
+                android:layout_width="286dp"
+                android:layout_height="103dp"
+                android:layout_marginStart="36dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/descrip_detalle"
+                android:inputType="textMultiLine"
+                android:textColor="#000000"
+                android:textColorHint="#602B2B2B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/niv_det" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="286dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="36dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descrip_detalle">
+
+        <TextView
+            android:id="@+id/referencia"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:paddingTop="8dp"
+            android:text="@string/referencia"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:layout_width="200dp"
+            android:layout_height="41dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/ref_si"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="#E3578C"
+                android:text="@string/si"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/ref_no"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="#E3578C"
+                android:text="@string/no"
+                android:textColor="#000000" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="286dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="36dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <TextView
+            android:id="@+id/impreso"
+            android:layout_width="86dp"
+            android:layout_height="41dp"
+            android:paddingTop="8dp"
+            android:text="@string/impreso"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:layout_width="200dp"
+            android:layout_height="41dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/imp_si"
+                android:layout_width="100dp"
+                android:layout_height="41dp"
+                android:buttonTint="#E3578C"
+                android:text="@string/si"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/imp_no"
+                android:layout_width="100dp"
+                android:layout_height="41dp"
+                android:layout_weight="1"
+                android:buttonTint="#E3578C"
+                android:text="@string/no"
+                android:textColor="#000000" />
+        </RadioGroup>
+    </LinearLayout>
+
+            <EditText
+                android:id="@+id/extra"
+                android:layout_width="286dp"
+                android:layout_height="103dp"
+                android:layout_marginStart="36dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/extra"
+                android:inputType="textMultiLine"
+                android:textColor="#000000"
+                android:textColorHint="#602B2B2B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+            <Button
+                android:id="@+id/btn_cotizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="#E3578C"
+                android:text="@string/cotizar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/extra" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

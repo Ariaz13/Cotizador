@@ -9,6 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cotizador">
+        <activity android:name=".Comision"></activity>
+        <activity android:name=".comisiones" />
+        <activity android:name=".Contrato" />
+        <activity android:name=".Nueva_cot" />
+        <activity android:name=".Inicio_clie" />
+        <activity android:name=".Inicio_Ilus" />
+        <activity android:name=".Login" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
