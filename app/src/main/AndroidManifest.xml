@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cotizador">
-        <activity android:name=".Comision"></activity>
+        <activity android:name=".Datos_Pago"></activity>
+        <activity android:name=".Comision" />
         <activity android:name=".comisiones" />
         <activity android:name=".Contrato" />
         <activity android:name=".Nueva_cot" />

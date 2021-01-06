@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inicio_clie);
+        setContentView(R.layout.activity_main);
     }
     public void NuevaCotizacion (View view){
         Intent nueva = new Intent( this, Nueva_cot.class);
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(comisiones);
     }
     public void Pago (View view){
-        Intent pago = new Intent( this, datos_de_pago.class);
+        Intent pago = new Intent( this, Datos_Pago.class);
         startActivity(pago);
     }
 }

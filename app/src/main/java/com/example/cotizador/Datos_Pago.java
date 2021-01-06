@@ -4,10 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class datos_de_pago extends AppCompatActivity {
+public class Datos_Pago extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.datos_de_pago);
+        setContentView(R.layout.activity_datos__pago);
     }
 }
