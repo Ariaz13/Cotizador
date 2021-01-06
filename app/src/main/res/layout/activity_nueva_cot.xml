@@ -84,6 +84,7 @@
             android:textSize="18sp" />
 
         <RadioGroup
+            android:id="@+id/rd_uso"
             android:layout_width="215dp"
             android:layout_height="41dp"
             android:orientation="horizontal">
@@ -210,6 +211,7 @@
             android:textSize="18sp" />
 
         <RadioGroup
+            android:id="@+id/rd_referencia"
             android:layout_width="200dp"
             android:layout_height="41dp"
             android:orientation="horizontal">
@@ -253,6 +255,7 @@
             android:textSize="18sp" />
 
         <RadioGroup
+            android:id="@+id/rd_impreso"
             android:layout_width="200dp"
             android:layout_height="41dp"
             android:orientation="horizontal">
