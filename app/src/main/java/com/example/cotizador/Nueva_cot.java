@@ -111,6 +111,8 @@ public class Nueva_cot extends AppCompatActivity implements View.OnClickListener
                     newRowId, Toast.LENGTH_LONG).show();
 
             Intent com = new Intent(this, Contrato.class);
+            com.putExtra("cliente", cliente.getText().toString());
+            com.putExtra("fecha", fechaEntrega.getText().toString());
             startActivity(com);
         }else
             Toast.makeText(getApplicationContext(), "Debes de completar todos los campos",
