@@ -44,8 +44,8 @@ public class Nueva_cot extends AppCompatActivity implements View.OnClickListener
         descripcionDetalle = (EditText) findViewById(R.id.descrip_detalle);
         tamano = (Spinner) findViewById(R.id.tamaño);
         especificaciones = (EditText) findViewById(R.id.extra);
-        String [] tam = {"Chico","Mediano", "Grande"};
-        String [] det = {"Poco","Medio", "Alto"};
+        String [] tam = {"5cmx5cm","10cmx15cm","20cmx30cm", "30cmx40cm"};
+        String [] det = {"Fondo plano","Poco detalle", "Muy detallado"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, tam);
         tamano.setAdapter(adapter);
         ArrayAdapter <String> adap = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, det);
