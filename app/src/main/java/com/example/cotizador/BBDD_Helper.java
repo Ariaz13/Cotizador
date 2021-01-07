@@ -1,6 +1,7 @@
 package com.example.cotizador;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -22,5 +23,11 @@ public class BBDD_Helper extends SQLiteOpenHelper {
     }
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         onUpgrade(db, oldVersion, newVersion);
+    }
+
+    public Cursor getAllData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("SELECT * FROM " + Estructura_BBDD.TABLE_NAME + " WHERE " + Estructura_BBDD.COLUMNA2 + "=?"  , null);
+        return res;
     }
 }

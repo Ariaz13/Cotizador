@@ -18,7 +18,7 @@ public class Estructura_BBDD {
     public static final String COLUMNA10 = "Impreso";
     public static final String COLUMNA11 = "Especificaciones";
     public static final String COLUMNA12 = "NombreIdentificador";
-    public static final String COLUMNA13 = "Costo";
+    //public static final String COLUMNA13 = "Costo";
 
     private static final String TEXT_TYPE = " TEXT";
     private static final String COMMA_SEP = ",";
@@ -29,14 +29,14 @@ public class Estructura_BBDD {
                     Estructura_BBDD.COLUMNA3 + TEXT_TYPE + COMMA_SEP +
                     Estructura_BBDD.COLUMNA4 + TEXT_TYPE + COMMA_SEP +
                     Estructura_BBDD.COLUMNA5 + TEXT_TYPE + COMMA_SEP +
-                    Estructura_BBDD.COLUMNA6 + " INTEGER" + COMMA_SEP +
+                    Estructura_BBDD.COLUMNA6 + TEXT_TYPE + COMMA_SEP +
                     Estructura_BBDD.COLUMNA7 + TEXT_TYPE + COMMA_SEP +
                     Estructura_BBDD.COLUMNA8 + TEXT_TYPE + COMMA_SEP +
-                    Estructura_BBDD.COLUMNA9 + " INTEGER" + COMMA_SEP +
-                    Estructura_BBDD.COLUMNA10 + " INTEGER" + COMMA_SEP +
+                    Estructura_BBDD.COLUMNA9 + TEXT_TYPE + COMMA_SEP +
+                    Estructura_BBDD.COLUMNA10 + TEXT_TYPE + COMMA_SEP +
                     Estructura_BBDD.COLUMNA11 + TEXT_TYPE + COMMA_SEP +
-                    Estructura_BBDD.COLUMNA12 + TEXT_TYPE + COMMA_SEP +
-                    Estructura_BBDD.COLUMNA13 + " INTEGER" + " )";
+                    Estructura_BBDD.COLUMNA12 + TEXT_TYPE + " )";
+                    //Estructura_BBDD.COLUMNA13 + " INTEGER" + " )";
 
     public static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + Estructura_BBDD.TABLE_NAME;
