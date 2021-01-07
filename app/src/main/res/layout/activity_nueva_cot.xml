@@ -16,25 +16,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="match_parent"
-        android:layout_height="41dp"
-        android:background="#A6A1A1"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="137dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="112dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
-        app:srcCompat="@mipmap/logo" />
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="137dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="112dp"
+                android:contentDescription="@string/logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+                app:srcCompat="@mipmap/logo" />
 
             <EditText
                 android:id="@+id/titulo"
@@ -48,7 +40,8 @@
                 android:textColor="#000000"
                 android:textColorHint="#602B2B2B"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+                app:layout_constraintTop_toBottomOf="@+id/imageView6"
+                android:autofillHints="" />
 
             <EditText
                 android:id="@+id/nombre"
@@ -62,7 +55,8 @@
                 android:textColor="#000000"
                 android:textColorHint="#602B2B2B"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/titulo" />
+                app:layout_constraintTop_toBottomOf="@+id/titulo"
+                android:autofillHints="" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -75,7 +69,7 @@
 
         <TextView
             android:id="@+id/uso"
-            android:layout_width="104dp"
+            android:layout_width="0dp"
             android:layout_height="41dp"
             android:layout_weight="1"
             android:paddingTop="8dp"
@@ -121,7 +115,8 @@
                 android:textColor="#000000"
                 android:textColorHint="#602B2B2B"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                android:autofillHints="" />
 
     <TextView
         android:id="@+id/tamaño_s"
@@ -139,9 +134,10 @@
                 android:layout_width="286dp"
                 android:layout_height="41dp"
                 android:layout_marginStart="36dp"
-                android:backgroundTint="#000000"
+                android:backgroundTint="#E3578C"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tamaño_s" />
+                app:layout_constraintTop_toBottomOf="@+id/tamaño_s"
+                android:popupBackground="#E3578C"/>
 
             <EditText
                 android:id="@+id/cant_per"
@@ -155,7 +151,8 @@
                 android:textColor="#000000"
                 android:textColorHint="#602B2B2B"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tamaño" />
+                app:layout_constraintTop_toBottomOf="@+id/tamaño"
+                android:autofillHints="" />
 
     <TextView
         android:id="@+id/nivel_detalle"
@@ -173,11 +170,10 @@
                 android:layout_width="286dp"
                 android:layout_height="41dp"
                 android:layout_marginStart="36dp"
-                android:backgroundTint="#000000"
-                android:textColor="#000000"
-                android:textColorHint="#602B2B2B"
+                android:backgroundTint="#E3578C"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nivel_detalle" />
+                app:layout_constraintTop_toBottomOf="@+id/nivel_detalle"
+                android:popupBackground="#E3578C"/>
 
             <EditText
                 android:id="@+id/descrip_detalle"
@@ -192,7 +188,8 @@
                 android:textColor="#000000"
                 android:textColorHint="#602B2B2B"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/niv_det" />
+                app:layout_constraintTop_toBottomOf="@+id/niv_det"
+                android:autofillHints="" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -294,7 +291,8 @@
                 android:textColor="#000000"
                 android:textColorHint="#602B2B2B"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+                android:autofillHints="" />
 
             <Button
                 android:id="@+id/btn_cotizar"

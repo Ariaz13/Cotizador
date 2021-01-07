@@ -7,6 +7,8 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -119,6 +121,10 @@ public class Nueva_cot extends AppCompatActivity implements View.OnClickListener
         Intent com = new Intent(this, Contrato.class);
         com.putExtra("cliente", cliente.getText().toString());
         com.putExtra("fecha", fechaEntrega.getText().toString());
+        com.putExtra("tamano", tamano.getSelectedItem().toString());
+        com.putExtra("personajes", cantidadPersonajes.getText().toString());
+        com.putExtra("descripcion", descripcionDetalle.getText().toString());
+        com.putExtra("extra", especificaciones.getText().toString());
         String t = String.valueOf(total);
         com.putExtra("costo", t);
         startActivity(com);
@@ -162,5 +168,42 @@ public class Nueva_cot extends AppCompatActivity implements View.OnClickListener
 
         total = ctamanio + cnDetalle + cpersonaje + creferencia + cuso + cimpresion;
         return total;
+    }
+
+    public void NuevaCotizacion (View view){
+        Intent nueva = new Intent( this, Nueva_cot.class);
+        startActivity(nueva);
+    }
+    public void Comisiones (View view){
+        Intent comisiones = new Intent( this, comisiones.class);
+        startActivity(comisiones);
+    }
+    public void Pago (View view){
+        Intent pago = new Intent( this, Datos_Pago.class);
+        startActivity(pago);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected (MenuItem opcion_menu){
+        int id = opcion_menu.getItemId();
+        if(id == R.id.nueva_cot){
+            NuevaCotizacion(null);
+            return  true;
+        }
+        if( id == R.id.comi){
+            Comisiones(null);
+            return true;
+        }
+        if ( id == R.id.pag){
+            Pago(null);
+            return true;
+        }
+        return super.onOptionsItemSelected(opcion_menu);
     }
 }

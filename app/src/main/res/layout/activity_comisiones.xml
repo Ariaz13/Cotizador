@@ -6,86 +6,72 @@
     android:layout_height="match_parent"
     android:background="#FFD495"
     tools:context=".comisiones">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="378dp"
-        tools:layout_editor_absoluteY="250dp">
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="31dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="match_parent"
-        android:layout_height="41dp"
-        android:background="#A6A1A1"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="137dp"
         android:layout_height="47dp"
-        android:layout_marginStart="136dp"
+        android:layout_marginStart="108dp"
         android:contentDescription="@string/logo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/logo" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout5"
-                android:layout_width="350dp"
-                android:layout_height="41dp"
-                android:layout_marginStart="28dp"
-                android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView6">
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="305dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6">
 
-                <EditText
-                    android:id="@+id/ing_nom"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="0dp"
-                    android:backgroundTint="#000000"
-                    android:ems="10"
-                    android:hint="@string/cliente"
-                    android:inputType="textPersonName"
-                    android:textColor="#000000"
-                    android:textColorHint="#602B2B2B" />
+        <EditText
+            android:id="@+id/ing_nom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/cliente"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHint="#602B2B2B" />
 
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:id="@+id/btn_search"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="0dp"
-                    android:backgroundTint="#E3578C"
-                    android:onClick="Buscar"
-                    android:text="@string/buscar" />
-            </LinearLayout>
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E3578C"
+            android:onClick="Buscar"
+            android:text="@string/buscar" />
+    </LinearLayout>
 
             <ListView
-        android:id="@+id/comisiones"
-        android:layout_width="320dp"
-        android:layout_height="600dp"
-        android:layout_marginStart="44dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+                android:id="@+id/comisiones"
+                android:layout_width="320dp"
+                android:layout_height="600dp"
+                android:layout_marginStart="20dp"
+                android:cacheColorHint="#000000"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
 
 
         </LinearLayout>
     </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools/"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+    <item android:id="@+id/nueva_cot"
+    android:title="Cotización"
+    android:icon="@android:drawable/ic_menu_add"
+        app:showAsAction="always"
+        />
+
+    <item android:id="@+id/comi"
+        android:title="Comisiones"
+        android:icon="@android:drawable/ic_menu_agenda"
+        app:showAsAction="always"
+        />
+
+    <item android:id="@+id/pag"
+        android:title="Datos para pago"
+        android:icon="@android:drawable/ic_menu_info_details"
+        app:showAsAction="always"/>
+
+</menu>

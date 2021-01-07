@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -14,6 +16,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class comisiones extends AppCompatActivity {
+    MainActivity m = new MainActivity();
     EditText nombre;
     ListView lv;
 
@@ -51,10 +54,33 @@ public class comisiones extends AppCompatActivity {
                 theList.add("Referencia: " + data.getString(8));
                 theList.add("Impreso: " + data.getString(9));
                 theList.add("Especificaciones: " + data.getString(10));
-                theList.add("Costo: " + data.getString(12));
+                theList.add("Costo: $" + data.getString(12));
                 ListAdapter listAdapter=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,theList);
                 lv.setAdapter(listAdapter);
             }
         }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected (MenuItem opcion_menu){
+        int id = opcion_menu.getItemId();
+        if(id == R.id.nueva_cot){
+            m.NuevaCotizacion(null);
+            return  true;
+        }
+        if( id == R.id.comi){
+            m.Comisiones(null);
+            return true;
+        }
+        if ( id == R.id.pag){
+            m.Pago(null);
+            return true;
+        }
+        return super.onOptionsItemSelected(opcion_menu);
     }
 }
