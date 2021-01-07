@@ -26,6 +26,7 @@ public class Nueva_cot extends AppCompatActivity implements View.OnClickListener
             descripcionDetalle, especificaciones, nombreIdentificador;
     Spinner nivelDetalle, tamano;
     private int dia, mes, anio;
+    int ctamanio, cnDetalle, cpersonaje, creferencia, cuso, cimpresion, total=0;
     //PlainText costo;
 
     @Override
@@ -102,25 +103,66 @@ public class Nueva_cot extends AppCompatActivity implements View.OnClickListener
             }
             values.put(Estructura_BBDD.COLUMNA11, especificaciones.getText().toString());
             values.put(Estructura_BBDD.COLUMNA12, nombreIdentificador.getText().toString());
-            //values.put(Estructura_BBDD.COLUMNA13, "0");
+            CalcularCosto(view);
+            values.put(Estructura_BBDD.COLUMNA13, total);
 
             // Insert the new row, returning the primary key value of the new row
             long newRowId = db.insert(Estructura_BBDD.TABLE_NAME, null, values);
 
             Toast.makeText(getApplicationContext(), "Se guardó el registro con clave: " +
                     newRowId, Toast.LENGTH_LONG).show();
-
-            Intent com = new Intent(this, Contrato.class);
-            com.putExtra("cliente", cliente.getText().toString());
-            com.putExtra("fecha", fechaEntrega.getText().toString());
-            startActivity(com);
+            Variables(view);
         }else
             Toast.makeText(getApplicationContext(), "Debes de completar todos los campos",
                     Toast.LENGTH_LONG).show();
     }
 
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
+    public void Variables(View view) {
+        Intent com = new Intent(this, Contrato.class);
+        com.putExtra("cliente", cliente.getText().toString());
+        com.putExtra("fecha", fechaEntrega.getText().toString());
+        String t = String.valueOf(total);
+        com.putExtra("costo", t);
+        startActivity(com);
+    }
 
+    public int CalcularCosto (View view){
+        // TAMAÑO
+        if(tamano.getSelectedItem().toString() == "5cmx5cm"){
+            ctamanio = 5;
+        }else if (tamano.getSelectedItem().toString() == "10cmx15cm"){
+            ctamanio = 20;
+        }else if(tamano.getSelectedItem().toString() == "20cmx30cm"){
+            ctamanio = 35;
+        }else if(tamano.getSelectedItem().toString() == "30cmx40cm"){
+            ctamanio = 50;
+        }
+        // DETALLE
+        if(nivelDetalle.getSelectedItem().toString() == "Fondo plano"){
+            cnDetalle = 10;
+        }else if(nivelDetalle.getSelectedItem().toString() == "Poco detalle") {
+            cnDetalle = 20;
+        }else if(nivelDetalle.getSelectedItem().toString() == "Muy detallado") {
+            cnDetalle = 50;
+        }
+        // PERSONAJE
+        String p = cantidadPersonajes.getText().toString();
+        int per = Integer.parseInt(p);
+        cpersonaje = 80 * per;
+        //REFERENCIA
+        if(referencia.getCheckedRadioButtonId() == R.id.ref_si){
+            creferencia = 20;
+        }else{creferencia = 60;}
+        //USO
+        if(uso.getCheckedRadioButtonId() == R.id.personal){
+            cuso = 20;
+        }else{cuso = 60;}
+        //IMPRESO
+        if(impreso.getCheckedRadioButtonId() == R.id.imp_si){
+            cimpresion = 40;
+        }else{cimpresion = 0;}
+
+        total = ctamanio + cnDetalle + cpersonaje + creferencia + cuso + cimpresion;
+        return total;
     }
 }

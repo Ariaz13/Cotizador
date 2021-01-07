@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     android:background="#FFD495"
     tools:context=".comisiones">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="378dp"
+        tools:layout_editor_absoluteY="250dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
@@ -21,43 +32,60 @@
         android:id="@+id/imageView6"
         android:layout_width="137dp"
         android:layout_height="47dp"
-        android:layout_marginStart="112dp"
+        android:layout_marginStart="136dp"
         android:contentDescription="@string/logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2"
         app:srcCompat="@mipmap/logo" />
 
-    <ListView
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="350dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="28dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6">
+
+                <EditText
+                    android:id="@+id/ing_nom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:backgroundTint="#000000"
+                    android:ems="10"
+                    android:hint="@string/cliente"
+                    android:inputType="textPersonName"
+                    android:textColor="#000000"
+                    android:textColorHint="#602B2B2B" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/btn_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:backgroundTint="#E3578C"
+                    android:onClick="Buscar"
+                    android:text="@string/buscar" />
+            </LinearLayout>
+
+            <ListView
         android:id="@+id/comisiones"
         android:layout_width="320dp"
-        android:layout_height="510dp"
-        android:layout_marginTop="104dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-    <EditText
-        android:id="@+id/ing_nom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="600dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="104dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
-    <Button
-        android:id="@+id/btn_search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="104dp"
-        android:onClick="Buscar"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

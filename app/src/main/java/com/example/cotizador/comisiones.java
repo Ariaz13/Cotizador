@@ -71,6 +71,7 @@ public class comisiones extends AppCompatActivity {
                 theList.add("Referencia: " + data.getString(8));
                 theList.add("Impreso: " + data.getString(9));
                 theList.add("Especificaciones: " + data.getString(10));
+                theList.add("Costo: " + data.getString(12));
                 ListAdapter listAdapter=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,theList);
                 lv.setAdapter(listAdapter);
             }

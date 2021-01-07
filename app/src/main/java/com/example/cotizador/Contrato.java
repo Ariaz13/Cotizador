@@ -9,19 +9,23 @@ import android.widget.TextView;
 
 public class Contrato extends AppCompatActivity {
     private TextView tv1;
+    Button btn_aceptar, btn_cancelar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contrato);
         tv1 = (TextView)findViewById(R.id.cotizacion_hecha);
+        btn_aceptar = (Button)findViewById(R.id.btn_aceptar);
+        btn_cancelar = (Button)findViewById(R.id.cancelar);
         String name=getIntent().getStringExtra("cliente");
         String date=getIntent().getStringExtra("fecha");
+        String costo=getIntent().getStringExtra("costo");
         tv1.setText("Cliente: " + name +"                                                                                     \n" +
                 "\n" +
                 "Fecha de entrega: "+ date + "\n" +
                 "\n" +
-                "Costo: $\n" +
+                "Costo: "+ costo +"\n" +
                 "\n" +
                 "El presente contrato vale por la comisión de una imagen con las siguientes características:\n" +
                 "\n" +
@@ -52,5 +56,12 @@ public class Contrato extends AppCompatActivity {
                 "Al leer este contrato y dar confirmación del pedido, las cláusulas presentadas anteriormente son aceptadas.");
     }
 
+    public void Eliminar(View view){
+
+    }
+
+    public void Aceptar(View view){
+
+    }
 
 }

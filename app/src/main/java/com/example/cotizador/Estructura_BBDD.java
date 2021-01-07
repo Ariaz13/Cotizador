@@ -36,7 +36,7 @@ public class Estructura_BBDD {
                     Estructura_BBDD.COLUMNA10 + TEXT_TYPE + COMMA_SEP +
                     Estructura_BBDD.COLUMNA11 + TEXT_TYPE + COMMA_SEP +
                     Estructura_BBDD.COLUMNA12 + TEXT_TYPE + COMMA_SEP +
-                    Estructura_BBDD.COLUMNA13 + " INTEGER" + " )";
+                    Estructura_BBDD.COLUMNA13 + TEXT_TYPE + " )";
 
     public static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + Estructura_BBDD.TABLE_NAME;

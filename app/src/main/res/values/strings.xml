@@ -30,5 +30,6 @@
     <string name="btn_aceptar">Aceptar</string>
     <string name="ver">Ver más</string>
     <string name="precio">Cotización</string>
+    <string name="buscar">Buscar</string>
     <string name="ing_nom">Nombre del cliente</string>
 </resources>
