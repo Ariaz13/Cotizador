@@ -3,6 +3,7 @@ package com.example.cotizador;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -83,16 +84,20 @@ public class Nueva_cot extends AppCompatActivity {
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
         values.put(Estructura_BBDD.COLUMNA2, cliente.getText().toString());
-
-        values.put(Estructura_BBDD.COLUMNA3, uso.getCheckedRadioButtonId());
-
+        if (uso.getCheckedRadioButtonId() == R.id.personal) {
+            values.put(Estructura_BBDD.COLUMNA3, "Personal");
+        } else{values.put(Estructura_BBDD.COLUMNA3, "Empresarial"); }
         values.put(Estructura_BBDD.COLUMNA4, fechaEntrega.getText().toString());
         values.put(Estructura_BBDD.COLUMNA5, tamano.getSelectedItem().toString());
         values.put(Estructura_BBDD.COLUMNA6, cantidadPersonajes.getText().toString());
         values.put(Estructura_BBDD.COLUMNA7, nivelDetalle.getSelectedItem().toString());
         values.put(Estructura_BBDD.COLUMNA8, descripcionDetalle.getText().toString());
-        values.put(Estructura_BBDD.COLUMNA9, referencia.getCheckedRadioButtonId());
-        values.put(Estructura_BBDD.COLUMNA10, impreso.getCheckedRadioButtonId());
+        if (referencia.getCheckedRadioButtonId() == R.id.ref_si) {
+            values.put(Estructura_BBDD.COLUMNA9, "Si");
+        }else{ values.put(Estructura_BBDD.COLUMNA9, "No");}
+        if (impreso.getCheckedRadioButtonId() == R.id.imp_si){
+            values.put(Estructura_BBDD.COLUMNA10, "Si");
+        }else{values.put(Estructura_BBDD.COLUMNA10, "No");}
         values.put(Estructura_BBDD.COLUMNA11, especificaciones.getText().toString());
         values.put(Estructura_BBDD.COLUMNA12, nombreIdentificador.getText().toString());
         //values.put(Estructura_BBDD.COLUMNA13, "0");
@@ -102,5 +107,8 @@ public class Nueva_cot extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), "Se guardó el registro con clave: " +
                 newRowId, Toast.LENGTH_LONG).show();
+
+        Intent com = new Intent( this, Contrato.class);
+        startActivity(com);
     }
 }
