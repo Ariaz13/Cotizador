@@ -27,7 +27,6 @@ public class Nueva_cot extends AppCompatActivity implements View.OnClickListener
     Spinner nivelDetalle, tamano;
     private int dia, mes, anio;
     int ctamanio, cnDetalle, cpersonaje, creferencia, cuso, cimpresion, total=0;
-    //PlainText costo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +74,6 @@ public class Nueva_cot extends AppCompatActivity implements View.OnClickListener
         BBDD_Helper helper = new BBDD_Helper(this);
         SQLiteDatabase db = helper.getWritableDatabase();
 
-        // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
         if (!cliente.getText().toString().isEmpty() && !fechaEntrega.getText().toString().isEmpty() && !tamano.getSelectedItem().toString().isEmpty()
         && !cantidadPersonajes.getText().toString().isEmpty() && !nivelDetalle.getSelectedItem().toString().isEmpty() && !descripcionDetalle.getText().toString().isEmpty()

@@ -29,30 +29,10 @@ public class comisiones extends AppCompatActivity {
         BBDD_Helper helper = new BBDD_Helper(this);
         SQLiteDatabase db = helper.getReadableDatabase();
 
-// Define a projection that specifies which columns from the database
-// you will actually use after this query.
-        /*String[] projection = {
-                Estructura_BBDD.COLUMNA2,
-                Estructura_BBDD.COLUMNA3,
-                Estructura_BBDD.COLUMNA4,
-                Estructura_BBDD.COLUMNA5,
-                Estructura_BBDD.COLUMNA6,
-                Estructura_BBDD.COLUMNA7,
-                Estructura_BBDD.COLUMNA8,
-                Estructura_BBDD.COLUMNA9,
-                Estructura_BBDD.COLUMNA10,
-                Estructura_BBDD.COLUMNA11,
-                Estructura_BBDD.COLUMNA12
-        };*/
-
-// Filter results WHERE "title" = 'My Title'
-        //String selection = Estructura_BBDD.COLUMNA2 + " = ?";
         String[] selectionArgs = { nombre.getText().toString() };
 
-        //BBDD_Helper h = new BBDD_Helper(this);
         ArrayList<String> theList =new ArrayList<>();
 
-        //Cursor data= h.getAllData();
         Cursor data = db.rawQuery("SELECT * FROM " + Estructura_BBDD.TABLE_NAME + " WHERE " + Estructura_BBDD.COLUMNA2 + " = ?", selectionArgs);
         if (data.getCount()==0){
             return;
@@ -76,20 +56,5 @@ public class comisiones extends AppCompatActivity {
                 lv.setAdapter(listAdapter);
             }
         }
-
-
-    // How you want the results sorted in the resulting Cursor
-        /*String sortOrder =
-                Estructura_BBDD.COLUMNA2 + " DESC";
-
-        Cursor cursor = db.query(
-                Estructura_BBDD.TABLE_NAME,   // The table to query
-                projection,             // The array of columns to return (pass null to get all)
-                selection,              // The columns for the WHERE clause
-                selectionArgs,          // The values for the WHERE clause
-                null,                   // don't group the rows
-                null,                   // don't filter by row groups
-                sortOrder               // The sort order
-        );*/
     }
 }

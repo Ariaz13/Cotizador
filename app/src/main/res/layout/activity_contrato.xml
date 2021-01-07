@@ -63,6 +63,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#E3578C"
+                    android:onClick="Eliminar"
                     android:text="@string/cancelar" />
 
                 <Space
@@ -75,6 +76,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#E3578C"
+                    android:onClick="Aceptar"
                     android:text="@string/btn_aceptar"
                     tools:text="@string/btn_aceptar" />
 
